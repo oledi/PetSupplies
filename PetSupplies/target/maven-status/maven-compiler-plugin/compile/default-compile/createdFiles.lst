@@ -1,0 +1,5 @@
+boundary\ProductFacade.class
+entities\Product.class
+boundary\AbstractFacade.class
+managedbeans\ProductJSFManagedBean.class
+entities\Product_.class
