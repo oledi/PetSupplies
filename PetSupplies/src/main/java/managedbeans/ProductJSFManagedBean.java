@@ -7,6 +7,7 @@ package managedbeans;
 
 import boundary.ProductFacade;
 import entities.Product;
+import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.inject.Named;
@@ -35,9 +36,14 @@ public class ProductJSFManagedBean {
         this.name = name;
     }
     
-    Product product1=new Product("first product", "the description of it", 22.5);
-    Product product2= new Product("second product", "the descirption of it", 50.2);
-    Product products[]= new Product[2];
+    Product product1=new Product("Bench groen", "Groene bench voor uw hond of cat, gemakkelijk op reis!", 80.95);
+    Product product2= new Product("Krabpaal deluxe", "zeer mooie en practische krabpaal voor de cat", 65.85);
+    Product product3 = new Product("Dentastix", "Gebitsverbeterende snack voor honden", 10);
+    Product product4 = new Product("Koookieez", "Heerlijke snacks  voor de hond", 5.50);
+    Product product5 = new Product("Zonnebloempitten", "Zaden voor uw parkiet", 2);
+    Product products[]= new Product[5];
+  
+    
   
     /**
      * Creates a new instance of ProductJSFManagedBean
@@ -45,6 +51,10 @@ public class ProductJSFManagedBean {
     public ProductJSFManagedBean() {
         products[0]= product1;
         products[1]= product2;
+        products[2]= product3;
+        products[3]= product4;
+        products[4] = product5;
+       // fillDB();
     }
     
     

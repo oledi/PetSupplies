@@ -1,16 +1,46 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
         <h:form>
-            <h:commandButton value="dingen" action="#{productJSFManagedBean.fillDB()}"/>
-            <h:outputText value="list: #{productJSFManagedBean.listFromDB()}"/> <br></br>
-            <h:outputText value="test: #{productJSFManagedBean.name}"/>
+            <f:view>
+                <h:form>
+                    <h1><h:outputText value="PetSupplies #{productJSFManagedBean.fillDB()}"/></h1>
+                    <h:dataTable value="#{productJSFManagedBean.listFromDB()}" var="item">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Naam Product"/>
+                            </f:facet>
+                            <h:outputText value="#{item.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Beschrijving"/>
+                            </f:facet>
+                            <h:outputText value="#{item.description}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Prijs"/>
+                            </f:facet>
+                            <h:outputText value="€#{item.price}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+            </f:view>
+            <br></br>
+            
+            koop deez spulletjes hier: Tel: 012345678
+
+           <!-- <h:outputText value="list: #{productJSFManagedBean.listFromDB()}"/> <br></br>-->
+           
             
         </h:form>
     </h:body>
