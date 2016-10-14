@@ -1,0 +1,162 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2016, 1:38:49 PM
+    Author     : RERANA
+*/
+
+body{
+    font-family: arial, helvetica, sans-serif;
+    background: floralwhite;
+}
+
+#main {
+    background: #eee;
+}
+
+
+#header {
+   float: top;
+   height: 100px;
+   text-align: center;
+   background: #FF9728;
+   font-family: segoe print, comic sans ms, times new roman;
+   font-size:26px;
+   font-weight: bold;
+   margin-top:0px;
+   margin-bottom: 0px;
+   padding-top: 0px;
+   padding-bottom: 30px;
+   color: white;
+   overflow:hidden;
+   border-bottom:3px solid green;
+    
+}
+
+#headerH2{
+   
+   margin-left:26%;
+}
+
+#subHeader{
+    float: top;
+    overflow:hidden;
+    background:green;
+    border: 1px solid grey;
+    height:1px;
+    text-align:center;
+    margin-left:25%;
+    margin-top:1.5%;
+    margin-bottom:1.5%;
+    width: 45%;
+}
+
+#containerDiv{
+    margin-left:25%;
+    
+     
+}
+
+#indexLeftColumn {
+   height: 300px;
+   width: 150%;
+   margin-right: 25px;
+   margin-left:5px;
+   margin-bottom: 5px;
+   text-align: left;
+   position:relative;
+   z-index:1;
+   background: floralwhite;
+   overflow:hidden;
+   border:1.5px solid grey; 
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   
+   font-weight: bold;
+   color:black;
+}
+
+
+#ColumnText{
+    position: relative;
+    top: 25px;
+    left: 10px;
+    right: 35px;
+    bottom:0px;
+}
+
+#indexMiddleColumn {
+    height: 110px;
+    width: 50%;
+    margin-left: 50px;
+    margin-right:30px;
+    left:-210px;
+    background: floralwhite;
+    position:relative;
+    
+    z-index:2;
+    
+}
+
+
+#indexRightColumn {
+   
+    height: 60px;
+    width: 170%;
+    left:-505px;
+    top: 100px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-align: center;
+    background: #007FFF;
+    position:relative;
+    color:white;
+    font-weight: bold;
+    z-index:3;
+    
+}
+
+ .buttons input {
+    position: relative;
+    top: 0px;
+    width:100%;
+    left: 0px;
+    right: 35px;
+    bottom:0px;
+    height:60px;
+    font-weight:bold;
+    font-size: 15px;
+    color: white;
+    background:#007FFF;
+    border: 0px solid grey;
+    
+}
+
+
+
+.buttons input:hover{
+     
+    background: #006FFF;
+    box-shadow: 0 6px 20px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+    transition: all 0.3s ease 0s;
+    
+}
+
+#footer{
+    float: bottom;
+    height: 60px;
+    background: #FF9728;
+   color:white;
+   text-align: center;
+   overflow:hidden;
+   position: relative;
+   border-top:1.5px solid green;
+   font-family: gadugicambria, calibri;
+   font-size:20px;
+   font-weight: bold;
+    
+}
+
+

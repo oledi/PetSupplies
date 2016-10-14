@@ -87,7 +87,8 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "entities.Product[ id=" + id + " ]"+" name is: "+name;
+       // return "entities.Product[ id=" + id + " ]"+" name is: "+name;
+       return "Name: "+name +" Description: "+ description+"  price: " + price;
         
         
     }

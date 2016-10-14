@@ -1,16 +1,71 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
     <h:head>
         <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="styles.css"/>
+       
     </h:head>
     <h:body>
-        Hello from Facelets
+        
+   
+        <div id="header"> <h1><h:outputText value="Petsupplies"/></h1></div>
+        
         <h:form>
-            <h:commandButton value="dingen" action="#{productJSFManagedBean.fillDB()}"/>
-            <h:outputText value="list: #{productJSFManagedBean.listFromDB()}"/> <br></br>
-            <h:outputText value="test: #{productJSFManagedBean.name}"/>
+            <f:view>
+                <h:form>
+                   
+                   
+                   
+                    <div id="subHeader">  </div>
+                     <div id="headerH2"> <h2> <h:outputText value="Producten #{productJSFManagedBean.fillDB()}"/> </h2> </div>
+                    <div id="subHeader">  </div>
+                    <div id="containerDiv">
+                     
+                    <h:dataTable value="#{productJSFManagedBean.listFromDB()}" var="item">
+                        
+                        <h:column>
+                            <div id="indexLeftColumn">
+                                <div id="ColumnText">   <h:outputText value="#{item.name}"/></div>
+                            </div>
+                        </h:column>
+                        
+                        <h:column>
+                            <div id="indexMiddleColumn">
+                            
+                                <div id="ColumnText"> <h:outputText value="#{item.description}"/> </div>
+                            </div>
+                        </h:column>
+                        
+                        <h:column>
+                            <div id="indexRightColumn">
+                          
+                              <!--  <div id="ColumnText"> <h:outputText value="€ #{item.price}"/> </div> -->
+                                <div class="buttons"> <h:commandButton value="€ #{item.price}"/> </div>
+                            </div>
+                        </h:column>
+                       
+                    </h:dataTable>  
+                        </div> 
+                </h:form>
+            </f:view>
+            <br></br>
+          
+           
+            <div id ="footer">
+                Bestel jouw producten hier: <br></br>Tel: 012345678
+            </div>
+            
+            
+                    <!-- <f:facet name="header">
+                                <h:outputText value="Prijs"/>
+                            </f:facet>-->
+           <!-- <h:outputText value="list: #{productJSFManagedBean.listFromDB()}"/> <br></br>-->
+           
             
         </h:form>
     </h:body>
